@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 enum Gender: Int {
     case man, woman, other
@@ -16,16 +15,13 @@ struct RegistrationModel {
     
     var name: String = ""
     var phone: String = ""
-    var age: Float = 0
+    var age: Float = 34.0
     var gender: Gender = .man
     var showNotifications = false
     
     var isValid = false
     var isPhoneValid = false
     var isNameValid = false
-    
-    var nameFieldBorder = Color.fieldBorder
-    var phoneFieldBorder = Color.fieldBorder
     
     mutating func validate() {
         
@@ -47,8 +43,5 @@ struct RegistrationModel {
         !name.containsOtherThan(.letters)
         
         isValid = isNameValid && (isPhoneValid1 || isPhoneValid2)
-        
-        phoneFieldBorder = isPhoneValid ? Color.valid : Color.invalid
-        nameFieldBorder = isNameValid ? Color.valid : Color.invalid
     }
 }
