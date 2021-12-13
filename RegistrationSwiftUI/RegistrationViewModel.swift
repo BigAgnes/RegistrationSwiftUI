@@ -62,7 +62,7 @@ class RegistrationViewModel: ObservableObject {
         if modelData.isValid {
             print("Имя: \(modelData.name)\nТелефон: \(modelData.phone)\nВозраст: \(Int(modelData.age))\nПол: \(modelData.gender)\nСмс-оповещение: \(modelData.showNotifications)")
         } else {
-            showingAlert.toggle()
+            showingAlert = true
         }
         
         phoneFieldBorder = modelData.isPhoneValid ? Color.valid : Color.invalid
