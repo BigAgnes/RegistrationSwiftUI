@@ -17,7 +17,7 @@ struct RegistrationModel {
     var phone: String = ""
     var age: Float = 34.0
     var gender: Gender = .man
-    var showNotifications = false
+    var showNotifications = true
     
     var isValid = false
     var isPhoneValid = false

@@ -10,7 +10,7 @@ import SwiftUI
 class RegistrationViewModel: ObservableObject {
     
     @Published private var modelData = RegistrationModel()
-    var showingAlert = false
+    @Published var showingAlert = false
     var nameFieldBorder = Color.fieldBorder
     var phoneFieldBorder = Color.fieldBorder
     
